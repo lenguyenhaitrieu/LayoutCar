@@ -1,0 +1,27 @@
+.subNav{
+    background-color: $color-grey-dark;
+    height: 100px;
+    .subNav_content{
+        width: 60%;
+        margin: auto;
+        .subNav_nav{
+            list-style: none;
+            justify-content: space-between;
+            padding: $pd-3 0;
+            li{
+                a{
+                    font-size: $fs-1;
+                    color: $color-grey;
+                    text-decoration: none;
+                }
+                &:hover{
+                   a{
+                       color: $color-blue;
+                   }
+                }
+                
+            }
+        }
+       
+    }
+}

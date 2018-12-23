@@ -1,0 +1,15 @@
+.carousel-control-prev, .carousel-control-next{
+    width: 8%;
+    opacity: 1;
+    i{
+        font-size: 50px;
+    }
+}
+
+.carousel-indicators{
+    li{
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+    }
+}

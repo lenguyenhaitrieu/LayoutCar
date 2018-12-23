@@ -1,0 +1,15 @@
+.header{
+    background-color: $color-black;
+    a{
+        color: $color-white;
+        text-decoration: none;
+        span{
+            padding: 0 $pd-0;
+            border: 1px solid $color-white;
+        }
+        &:hover{
+            color: $color-blue;
+        }
+    }
+    
+}

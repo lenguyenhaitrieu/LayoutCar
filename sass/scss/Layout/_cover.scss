@@ -1,0 +1,41 @@
+.myCarousel{
+    margin-top: -16px;
+    .carousel-caption{
+        top: 150px;
+        left:70px;
+        width: 50%;
+        animation: fadeInDown 1s forwards ;
+        -webkit-animation: fadeInDown 1s forwards ;
+        .underline{
+            @include underline($color-white);
+        }
+        h1{
+            @include text($color-white, $fs-5,$fw-normal);
+            font-family: 'Times New Roman', Times, serif;
+        }
+        
+    }
+    .carousel__search{
+        position: absolute;
+        bottom: 50px;
+        width: 80%;
+        margin: auto;
+        left: 150px;
+        input{
+            padding: $pd-2 $pd-2;
+            &:focus{
+                box-shadow: none;
+                border: none;
+            }
+        }
+        .input-group-append{
+            padding: $pd-3;
+            background-color: $color-black;
+            color: white;
+            border: 1px solid white;
+            i{
+                font-size: $fs-3;
+            }
+        }
+    }
+}

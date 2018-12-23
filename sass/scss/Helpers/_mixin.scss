@@ -1,0 +1,41 @@
+@mixin underline($bg-color){
+    width: 80px;
+    height: 2px;
+    margin-bottom: $mg-3;
+    background-color: $bg-color;
+}   
+
+@mixin text($color, $fs, $fw){
+    color: $color;
+    font-size: $fs;
+    font-weight: $fw;
+}
+
+@mixin button($color, $bg-color, $color-hover){
+    color: $color;
+    background-color: $bg-color;
+    padding: $pd-0 $pd-2;
+    &:hover{
+        color: $color-hover;
+    }
+}
+
+@mixin over($bottom){
+    background-color: $color-black-light;
+    color: $color-white;
+    position: absolute;
+    width: 100%;
+    padding: $pd-2 $pd-3 $pd-3;
+    transition: all 0.5s;
+    bottom: $bottom;
+}
+
+@mixin respond-to($breakpoint){
+    @if(map-has-key($map: $breakpoints, $key: $breakpoint)){
+        $value: map-get($map: $breakpoints, $key:$breakpoint);
+        @media screen and (max-width: $value){
+            @content
+        }
+    }
+}
+

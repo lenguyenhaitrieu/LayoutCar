@@ -1,0 +1,67 @@
+.product{
+    background-color: $color-black;
+    padding: $pd-4 0;
+    ul{
+        width: fit-content; //Nội dung tới bao nhiêu = nhiêu đó
+        margin: auto;
+        width: 50%;
+        border: none;
+        .nav-item{
+            width: 25%;
+            text-align: center;
+            &:hover{
+                .nav-link{
+                    color: $color-white;
+                }
+            }
+            .nav-link{
+                @include text($color-grey, $fs-0, $fw-normal);
+                background: linear-gradient(#303030, #202020);
+                border: 1px solid $color-dark;
+                margin: 0 2px;
+                &.active{
+                    color: $color-blue;
+                }
+            }
+        }
+    }
+    .product_items{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        .item_one{
+            grid-column: 1/span 2;
+            grid-row: 1/span 2;
+        }
+        img{
+            width: 100%;
+        }
+        .item{
+            position: relative;
+            border: 1px solid $color-black;
+            overflow: hidden;
+            &:hover{
+                .overlay_large{
+                background-color: $color-black-dark;
+                padding-bottom: $pd-5;
+                }
+                .overlay{
+                    background-color: $color-black-dark;
+                    bottom: 0;
+                }
+            }
+            .overlay_large{
+                @include over(0px);
+                
+            }
+            .overlay{
+                @include over(-90px);
+            }
+        }
+        
+    }
+    @include respond-to('large'){
+        .product_items{
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}

@@ -1,0 +1,11 @@
+@for $i from 0 to 6{
+    .mr-#{$i}{
+        margin-right: 0.5rem * $i;
+    }
+}
+
+@each $key, $value in $color{
+    .btn--#{$key}{
+        background-color: $value;
+    }
+}
